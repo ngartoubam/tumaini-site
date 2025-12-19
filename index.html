@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TUMAINI ACTION_ASBL (TUACT+)</title>
+  <meta name="description" content="Fiche de présentation de TUMAINI ACTION_ASBL (TUACT+) : vision, devise, domaines d’action, zones d’intervention, réalisations, équipe, valeurs et contacts." />
+
+  <style>
+    :root{
+      /* Couleurs issues du logo (approx.) */
+      --blue: #0303f6;      /* bleu main */
+      --cyan: #0d9adb;      /* bleu/cyan */
+      --orange: #ea9325;    /* étoile/figure */
+      --magenta: #e42e69;   /* figure rose */
+      --ink: #0f172a;
+      --muted: #475569;
+      --bg: #f6f8ff;
+      --card: #ffffff;
+      --line: rgba(15, 23, 42, .10);
+      --shadow: 0 10px 30px rgba(2, 6, 23, .10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 480px at 10% 0%, rgba(13,154,219,.18), transparent 60%),
+        radial-gradient(900px 480px at 90% 0%, rgba(228,46,105,.14), transparent 60%),
+        radial-gradient(900px 480px at 50% 110%, rgba(234,147,37,.14), transparent 60%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a{ color: var(--blue); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{ max-width: 1080px; margin: 0 auto; padding: 26px 16px 56px; }
+
+    /* Header */
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap: 14px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,.85);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 10px;
+      z-index: 10;
+    }
+
+    .brand{ display:flex; align-items:center; gap: 12px; min-width: 260px; }
+    .brand img{
+      width: 58px; height: 58px; object-fit: contain;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid rgba(15,23,42,.08);
+      padding: 6px;
+    }
+    .brand-title{ font-weight: 800; letter-spacing: .2px; }
+    .brand-sub{ color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+    nav{ display:flex; flex-wrap:wrap; gap: 10px; justify-content:flex-end; }
+    nav a{
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(15,23,42,.08);
+      background: rgba(255,255,255,.65);
+      color: var(--ink);
+    }
+    nav a:hover{
+      border-color: rgba(3,3,246,.28);
+      background: rgba(13,154,219,.10);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top: 14px;
+      padding: 22px 18px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(3,3,246,.09), rgba(13,154,219,.08), rgba(228,46,105,.07), rgba(234,147,37,.07));
+      border: 1px solid rgba(15,23,42,.08);
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin: 0 0 6px;
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.15;
+    }
+    .hero p{ margin: 0; color: var(--muted); max-width: 80ch; }
+    .badges{ margin-top: 12px; display:flex; flex-wrap:wrap; gap: 8px; }
+    .badge{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,.10);
+      background: rgba(255,255,255,.7);
+      color: var(--ink);
+      display:inline-flex; align-items:center; gap: 8px;
+    }
+    .dot{ width: 10px; height: 10px; border-radius: 50%; display:inline-block; }
+    .dot.blue{ background: var(--blue); }
+    .dot.cyan{ background: var(--cyan); }
+    .dot.magenta{ background: var(--magenta); }
+    .dot.orange{ background: var(--orange); }
+
+    /* Cards / Sections */
+    .grid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .card{
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      display:flex; align-items:center; gap: 10px;
+    }
+    .pill{
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.65);
+      color: var(--muted);
+    }
+    .lead{ color: var(--muted); margin: 0; }
+
+    ul{ margin: 10px 0 0 18px; }
+    li{ margin: 6px 0; }
+
+    .two-cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .contact-card{
+      border-radius: 16px;
+      border: 1px dashed rgba(15,23,42,.18);
+      padding: 14px 14px;
+      background: rgba(246,248,255,.65);
+    }
+    .contact-card h3{ margin: 0 0 6px; font-size: 15px; }
+    .contact-card p{ margin: 0; color: var(--muted); font-size: 14px; }
+
+    footer{
+      margin-top: 18px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 10px 0 0;
+    }
+
+    @media (max-width: 860px){
+      header{ position: static; }
+      .brand{ min-width: auto; }
+      .two-cols{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <!-- IMPORTANT: mets ton logo dans le repo au même niveau que index.html -->
+        <img src="logo-tuact.jpg" alt="Logo TUMAINI ACTION_ASBL (TUACT+)" />
+        <div>
+          <div class="brand-title">TUMAINI ACTION_ASBL (TUACT+)</div>
+          <div class="brand-sub">L’espoir au cœur de l’action</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation">
+        <a href="#qui">Qui sommes-nous ?</a>
+        <a href="#vision">Vision</a>
+        <a href="#domaines">Domaines</a>
+        <a href="#zones">Zones</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#equipe">Équipe</a>
+        <a href="#valeurs">Valeurs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Fiche de présentation de TUMAINI ACTION_ASBL « TUACT+ »</h1>
+      <p>
+        Organisation congolaise à but non lucratif, engagée auprès des communautés vulnérables
+        vers la dignité, la paix et le développement.
+      </p>
+
+      <div class="badges" aria-label="Couleurs et identité">
+        <span class="badge"><span class="dot blue"></span>Bleu</span>
+        <span class="badge"><span class="dot cyan"></span>Cyan</span>
+        <span class="badge"><span class="dot magenta"></span>Magenta</span>
+        <span class="badge"><span class="dot orange"></span>Orange</span>
+      </div>
+    </section>
+
+    <main class="grid">
+
+      <section id="qui" class="card">
+        <h2>A. Qui sommes-nous ? <span class="pill">Présentation</span></h2>
+        <p class="lead">
+          TUMAINI ACTION, en sigle TUACT+, est une organisation congolaise à but non lucratif,
+          légalement enregistrée sous le n° F.92/50.099 au Ministère de la Justice et Garde des Sceaux de la RDC.
+          Fondée le 15 juillet 2017 à Goma (Nord-Kivu), son nom « Tumaini » signifie espoir en swahili,
+          reflétant son engagement à soutenir les communautés vulnérables vers la dignité, la paix et le développement.
+        </p>
+      </section>
+
+      <section id="vision" class="card">
+        <h2>B. Vision <span class="pill">Cap</span></h2>
+        <p class="lead">
+          Une République Démocratique du Congo pacifique, juste et inclusive, où les droits des enfants, des femmes,
+          des hommes et des groupes marginalisés sont respectés et promus.
+        </p>
+      </section>
+
+      <section id="devise" class="card">
+        <h2>C. Devise <span class="pill">Identité</span></h2>
+        <p class="lead"><strong>L’espoir au cœur de l’action</strong></p>
+      </section>
+
+      <section id="domaines" class="card">
+        <h2>D. Nos domaines d’action <span class="pill">Interventions</span></h2>
+        <ul>
+          <li><strong>Protection de l’enfance</strong> : MHPSS, réintégration des enfants associés aux groupes armés (EAFGA), accompagnement des ENA/ES.</li>
+          <li><strong>DDR & stabilisation</strong> : accompagnement des ex-combattants et soutien à leur réinsertion communautaire.</li>
+          <li><strong>Éducation inclusive</strong> : accès à l’éducation formelle et non formelle pour les enfants affectés par les crises.</li>
+          <li><strong>Prévention et réponse aux VBG</strong> : atténuation des risques et prise en charge holistique des survivants(es).</li>
+          <li><strong>Promotion des droits humains</strong> : enfants, femmes, jeunes et groupes marginalisés.</li>
+          <li><strong>Relèvement économique communautaire</strong> : appui aux AGR et à la résilience économique.</li>
+          <li><strong>Paix et cohésion sociale</strong> : dialogue communautaire, gestion des conflits.</li>
+          <li><strong>Santé de la reproduction & sécurité alimentaire</strong> : sensibilisation, accompagnement et appui communautaire.</li>
+        </ul>
+      </section>
+
+      <section id="zones" class="card">
+        <h2>E. Zones d’intervention <span class="pill">Géographie</span></h2>
+        <ul>
+          <li><strong>Province du Nord-Kivu</strong> (territoires de Beni, Walikale, Nyiragongo et ville de Goma).</li>
+          <li><strong>Extension envisagée</strong> vers le Sud-Kivu, Ituri, Tanganyika et Haut-Uélé.</li>
+        </ul>
+      </section>
+
+      <section id="realisations" class="card">
+        <h2>F. Nos réalisations <span class="pill">Résultats</span></h2>
+        <p class="lead">
+          Bien que fonctionnant principalement par des ressources limitées et des cotisations des membres,
+          TUACT+ a mené des activités communautaires de protection, de réinsertion socio-économique et
+          d’accompagnement psychosocial, notamment dans le territoire de Nyiragongo.
+          Certains animateurs comptent parmi les pionniers du DDR en RDC (Ituri, 2004–2007).
+        </p>
+      </section>
+
+      <section id="equipe" class="card">
+        <h2>G. Notre équipe <span class="pill">Ressources</span></h2>
+        <p class="lead">
+          Une équipe pluridisciplinaire de 9 membres permanents (dont 4 femmes) : juristes, psychologues,
+          économistes, sociologues, coordonnée par un expert chevronné ayant une expérience avec les Nations Unies
+          et ONG internationales.
+        </p>
+      </section>
+
+      <section id="valeurs" class="card">
+        <h2>H. Nos valeurs <span class="pill">Culture</span></h2>
+        <p class="lead"><strong>Solidarité – Humanité – Dignité – Inclusion – Responsabilité – Espoir</strong></p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>I. Contact <span class="pill">Coordonnées</span></h2>
+
+        <div class="two-cols">
+          <div class="contact-card">
+            <h3>Jacques CHIKURU</h3>
+            <p><strong>Président du Conseil d’Administration</strong></p>
+            <p>Tél. +243990707132</p>
+            <p>Email : <a href="mailto:tumaini.action@gmail.com">tumaini.action@gmail.com</a></p>
+            <p>Email : <a href="mailto:jacquesntabeza@gmail.com">jacquesntabeza@gmail.com</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Eddy BAHIGA</h3>
+            <p><strong>Coordinateur national</strong></p>
+            <p>Tél. +243813142316 / +243992323181</p>
+            <p>Email : <a href="mailto:ebahiga@gmail.com">ebahiga@gmail.com</a></p>
+            <p>Email : <a href="mailto:tumaini.action@gmail.com">tumaini.action@gmail.com</a></p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="y"></span> — TUMAINI ACTION_ASBL (TUACT+)
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
